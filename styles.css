@@ -1,0 +1,99 @@
+.my-3, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  color: black;
+  margin-left: 6px;
+}
+
+#input-form-section {
+    background-color: rgb(180, 210, 178);
+    border: 2px solid darkpurple;
+    padding: 20px;
+  }
+  
+  /* TV shows and movie section */ 
+  #content-section {
+    background-color: rgb(180, 210, 178);
+    padding: 20px;
+  }
+
+  /* Input text */
+#input-form-section input,
+#input-form-section select,
+#input-form-section textarea {
+  font-family: "Montserrat", sans-serif; 
+  font-size: 16px;
+  font-weight: 200;
+}
+
+ /* Label text */
+#input-form-section label {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.list-group-item {
+    border-color: black;
+    border-width: 2px;
+  }
+
+.list-group-item h5 {
+    font-size: 18px; /* for the title */
+  }
+
+.list-group-item p {
+    font-size: 16px; /* for the rating */
+  }
+  
+  .list-group-item small {
+    font-size: 16px; /* for the notes */
+  }
+
+.list-group-item h5,
+.list-group-item p,
+.list-group-item small {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: rgb(33, 30, 30);
+}
+
+.full-width-container {
+  width: 100vw;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: rgb(33, 30, 30);
+  margin-left: 6px;
+}
+
+.full-width-row {
+  width: 100%;
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  width: .2em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#title, #notes {
+  width: 50%;
+}
+
+#type, #rating {
+  width: 30%;
+}

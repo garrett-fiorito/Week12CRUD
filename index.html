@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img\icons8-r2-d2-48.png" type="image/png">
+    <title>TV Catalog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="git.ignore\node_modules\bootstrap\dist\css\bootstrap.css">
+</head>
+<body>
+    <div class="container-fluid full-width-container">
+        <div class="row full-width-row">
+            <div class="col-12" id="input-form-section">
+                <h1 class="my-3">TV Catalog</h1>
+                <form id="entry-form">
+                    <div class="mb-1">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="type" class="form-label">Type</label>
+                        <select class="form-select" id="type" required>
+                            <option value="movie">Movie</option>
+                            <option value="tv-show">TV Show</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label for="rating" class="form-label">Rating</label>
+                        <input type="number" class="form-control" id="rating" min="0" max="10" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="notes" class="form-label">Notes</label>
+                        <textarea class="form-control" id="notes"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </form>
+            </div>
+        </div>
+        <div class="row my-5" id="content-section">
+            <div class="col-6">
+                <h3>Movies</h3>
+                <div id="movie-list" class="list-group"></div>
+            </div>
+            <div class="col-6">
+                <h3>TV Shows</h3>
+                <div id="tv-show-list" class="list-group"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="edit-modal-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="edit-modal-label">Edit Entry</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="edit-form">
+                        <input type="hidden" id="edit-id">
+                        <div class="mb-3">
+                            <label for="edit-title" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="edit-title" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-type" class="form-label">Type</label>
+                            <select class="form-select" id="edit-type" required>
+                                <option value="movie">Movie</option>
+                                <option value="tv-show">TV Show</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-rating" class="form-label">Rating</label>
+                            <input type="number" class="form-control" id="edit-rating" min="0" max="10" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-notes" class="form-label">Notes</label>
+                            <textarea class="form-control" id="edit-notes"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="git.ignore\node_modules\bootstrap\dist\js\bootstrap.js"></script>
+    <script src="git.ignore\node_modules\bootstrap\dist\js\bootstrap.bundle.js"></script>
+</body>
+</html>
